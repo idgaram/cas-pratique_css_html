@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+.merriweather-light {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.merriweather-light-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.merriweather-regular-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.merriweather-bold-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+:root {
+  --clr-card-background: rgb(106, 148, 165);
+  --clr-body-background: rgb(141, 164, 173);
+  --clr-card-border: rgb(17, 81, 107);
+  --clr-body-font: rgb(39, 49, 63);
+  --clr-button: rgb(46, 112, 206);
+  --clr-button-hover: rgb(19, 97, 206);
+  --font-card: "Merriweather", serif;
+  --s100: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-card-background);
+  font-family: var(--font-card);
+  color: var(--clr-body-font);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  margin: calc(var(--s100) * 3) var(--s100);
+}
+
+.card-container {
+  background-color: var(--clr-body-background);
+  line-height: calc(var(--s100) * 1.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--s100);
+  width: 40%;
+  padding: var(--s100);
+  height: 100%;
+  box-shadow: var(--s100) var(--s100) var(--clr-card-border);
+  border: calc(var(--s100) * 0.15) solid var(--clr-card-border);
+}
+.card-image {
+  margin: 0 0 var(--s100) var(--s100);
+  width: 100%;
+  min-width: 80%;
+  padding: 0;
+  border-radius: calc(var(--s100) * 0.65);
+}
+
+.card-button {
+  width: 40%;
+  background-color: rgb(46, 112, 206);
+  color: rgb(219, 234, 255);
+  border-radius: calc(var(--s100) * 0.75);
+  border-style: none;
+  padding: calc(var(--s100) * 0.5) calc(var(--s100) * 0.5);
+
+  font-family: var(--font-card);
+  font-size: calc(var(--s100) * 0.8);
+}
+
+.card-button:hover {
+  background-color: var(--clr-button-hover);
+  cursor: pointer;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.popover-content {
+  position: absolute;
+  inset: unset;
+  bottom: 50%;
+  right: 40%;
+  transform: translate(0, 10px);
+  background-color: var(--clr-body-background);
+  padding: calc(var(--s100) * 1.5);
+  border-radius: calc(var(--s100) * 0.75);
+  border: calc(var(--s100) * 0.15) solid var(--clr-card-border);
+  box-shadow: var(--s100) var(--s100) var(--clr-card-border);
+  width: var(--s100);
+  text-align: center;
+}
+
+h1 {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: rgb(0, 106, 148);
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 1rem 1rem;
+  font-weight: 100;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    font-size: 1.15rem;
+  }
+  .card-container {
+    width: 100%;
+    height: 100%;
+  }
+  .designer-quote {
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
