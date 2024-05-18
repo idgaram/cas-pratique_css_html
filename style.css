@@ -261,7 +261,7 @@ main {
   border-radius: calc(var(--s100) * 0.75);
   border: calc(var(--s100) * 0.15) solid var(--clr-card-border);
   box-shadow: var(--s100) var(--s100) var(--clr-card-border);
-  width: var(--s100);
+  width: 25rem;
   text-align: center;
 }
 
